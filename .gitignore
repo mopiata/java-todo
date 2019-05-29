@@ -75,3 +75,5 @@ settings.gradle
 .idea
 .idea/
 *.iml
+
+!gradle-wrapper.jar

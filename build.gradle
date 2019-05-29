@@ -2,6 +2,7 @@ group 'to-do-list'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'application'
 
 sourceCompatibility = 1.8
 
@@ -14,4 +15,10 @@ dependencies {
     compile "com.sparkjava:spark-core:2.6.0"
     compile "com.sparkjava:spark-template-handlebars:2.5.5"
     compile 'org.slf4j:slf4j-simple:1.7.21'
+    compile 'org.sql2o:sql2o:1.5.4'
+    compile group: 'com.h2database', name: 'h2', version: '1.4.199'
 }
+
+applicationName="to-do-list"
+mainClassName='App'
+task stage(dependsOn: ['clean','installDist'])
